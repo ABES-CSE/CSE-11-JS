@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Papers Scissors Game</title>
+</head>
+<body>
+    <button onclick="
+        let random=Math.random();
+        if(random>=0 && random<1/3){
+            console.log(`Rock: Draw`);
+            alert(`Rock: Draw`);
+        }else if(random>=1/3 && random<2/3){
+            console.log(`Papers: You Lost`);
+            alert(`Papers: You Lost`);
+        }else{
+            console.log(`Scissors: You Won`);
+            alert(`Scissors: You Won`);
+        }
+        ">Rock</button>
+    
+    <button onclick="
+        random=Math.random();
+        if(random>=0 && random<1/3){
+            console.log(`Rock: You Won`);
+            alert(`Rock: You Won`);
+        }else if(random>=1/3 && random<2/3){
+            console.log(`Papers: Draw`);
+            alert(`Papers: Draw`);
+        }else{
+            console.log(`Scissors: You Lost`);
+            alert(`Scissors: You Lost`);
+        }
+    ">Papers</button>
+    
+    <button onclick="
+        random=Math.random();
+        if(random>=0 && random<1/3){
+            console.log(`Rock: You Lost`);
+            alert(`Rock: You Lost`);
+
+        }else if(random>=1/3 && random<2/3){
+            console.log(`Papers: You Won`);
+            alert(`Papers: You Won`);
+        }else{
+            console.log(`Scissors: Draw`);
+            alert(`Scissors: Draw`);
+        }
+    ">Scissors</button>
+
+    <script>
+        
+    </script>
+</body>
+</html>
