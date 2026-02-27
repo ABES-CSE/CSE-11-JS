@@ -51,25 +51,32 @@
     ">PAPER</button>
     
     <button class="btn" onclick="
-    computerMove();
-    result='';
-    if(compMove==='Rock'){
-        result='You Lose.';
-    } else if(compMove==='Paper'){
-        result='You Win.';
-    } else if(compMove==='Scissor'){
-        result='Tie.';
-    }
-    alert(`You picked Scissor. Computer picked ${compMove}. ${result}`)
+    playGame('Scissor');
     ">SCISSOR</button>
     </div>
     
 
     <script>
+
+        function playGame(playerMove){
+        let compMove=computerMove();
+        result='';
+        if(playerMove==='Scissor'){
+            if(compMove==='Rock'){
+                result='You Lose.';
+            } else if(compMove==='Paper'){
+                result='You Win.';
+            } else if(compMove==='Scissor'){
+                result='Tie.';
+            }
+        }
         
-        let compMove='';
+        alert(`You picked ${playerMove}. Computer picked ${compMove}. ${result}`)
+        }
+        
         function computerMove(){
             let randomNum=Math.random();
+            let compMove='';
             if(randomNum>=0 && randomNum<1/3){
                 compMove='Rock';
             } else if(randomNum>=1/3 && randomNum<2/3){
